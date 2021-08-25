@@ -1,0 +1,143 @@
+2021-08-25 22:43:57.636824: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.1
+2021-08-25 22:44:01.894098: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-08-25 22:44:01.898660: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-08-25 22:44:02.026268: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:62:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.72GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-08-25 22:44:02.027047: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.1
+2021-08-25 22:44:02.031995: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2021-08-25 22:44:02.032471: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2021-08-25 22:44:02.036761: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-08-25 22:44:02.038450: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-08-25 22:44:02.043133: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-08-25 22:44:02.046078: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2021-08-25 22:44:02.054404: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.7
+2021-08-25 22:44:02.060972: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-08-25 22:44:02.062033: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-08-25 22:44:02.069436: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:62:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.72GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-08-25 22:44:02.070020: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.1
+2021-08-25 22:44:02.070344: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2021-08-25 22:44:02.070695: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2021-08-25 22:44:02.070984: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-08-25 22:44:02.071263: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-08-25 22:44:02.071542: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-08-25 22:44:02.071821: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2021-08-25 22:44:02.072100: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.7
+2021-08-25 22:44:02.078773: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-08-25 22:44:02.079300: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.1
+2021-08-25 22:44:03.230808: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-08-25 22:44:03.231589: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-08-25 22:44:03.232078: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-08-25 22:44:03.238056: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30095 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:62:00.0, compute capability: 7.0)
+2021-08-25 22:44:03.238858: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+WARNING:tensorflow:AutoGraph could not transform <bound method TransformerDecoderBlock.call of <model.TransformerDecoderBlock object at 0x2ba9fd4545e0>> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: module 'gast' has no attribute 'Index'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <bound method PositionalEmbedding.call of <model.PositionalEmbedding object at 0x2ba9fd1d95e0>> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: module 'gast' has no attribute 'Index'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+2021-08-25 22:44:20.020462: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-08-25 22:44:20.082807: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2300000000 Hz
+2021-08-25 22:44:22.683849: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2021-08-25 22:44:22.788395: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000299675.jpg; No such file or directory
+2021-08-25 22:44:22.788423: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000134754.jpg; No such file or directory
+2021-08-25 22:44:22.788406: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000230843.jpg; No such file or directory
+2021-08-25 22:44:22.788416: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000257263.jpg; No such file or directory
+2021-08-25 22:44:22.788426: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000538480.jpg; No such file or directory
+2021-08-25 22:44:22.788396: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000266366.jpg; No such file or directory
+2021-08-25 22:44:22.788437: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000321194.jpg; No such file or directory
+2021-08-25 22:44:22.788437: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000116100.jpg; No such file or directory
+2021-08-25 22:44:22.788464: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000302443.jpg; No such file or directory
+2021-08-25 22:44:22.788561: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000379340.jpg; No such file or directory
+2021-08-25 22:44:22.788561: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000318556.jpg; No such file or directory
+2021-08-25 22:44:22.788675: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000285579.jpg; No such file or directory
+2021-08-25 22:44:22.792244: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000187042.jpg; No such file or directory
+2021-08-25 22:44:22.788692: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000293605.jpg; No such file or directory
+2021-08-25 22:44:22.788695: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000360334.jpg; No such file or directory
+2021-08-25 22:44:22.788622: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000539984.jpg; No such file or directory
+2021-08-25 22:44:22.788762: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000385716.jpg; No such file or directory
+2021-08-25 22:44:22.788705: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000513461.jpg; No such file or directory
+2021-08-25 22:44:22.788797: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000476220.jpg; No such file or directory
+2021-08-25 22:44:22.788723: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000389006.jpg; No such file or directory
+2021-08-25 22:44:22.788727: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000360306.jpg; No such file or directory
+2021-08-25 22:44:22.788765: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000465049.jpg; No such file or directory
+2021-08-25 22:44:22.788703: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000279672.jpg; No such file or directory
+2021-08-25 22:44:22.788740: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000350235.jpg; No such file or directory
+2021-08-25 22:44:22.788791: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000314265.jpg; No such file or directory
+2021-08-25 22:44:22.788787: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000524679.jpg; No such file or directory
+2021-08-25 22:44:22.789028: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000231029.jpg; No such file or directory
+2021-08-25 22:44:22.788630: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000124567.jpg; No such file or directory
+2021-08-25 22:44:22.788828: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000503598.jpg; No such file or directory
+2021-08-25 22:44:22.788829: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000161657.jpg; No such file or directory
+2021-08-25 22:44:22.788830: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000226658.jpg; No such file or directory
+2021-08-25 22:44:22.788851: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000520049.jpg; No such file or directory
+2021-08-25 22:44:22.788810: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000122802.jpg; No such file or directory
+2021-08-25 22:44:22.792233: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000480489.jpg; No such file or directory
+2021-08-25 22:44:22.792266: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000213532.jpg; No such file or directory
+2021-08-25 22:44:22.788711: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000479495.jpg; No such file or directory
+2021-08-25 22:44:22.792251: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000101891.jpg; No such file or directory
+2021-08-25 22:44:22.800263: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000480545.jpg; No such file or directory
+2021-08-25 22:44:22.800489: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000334790.jpg; No such file or directory
+2021-08-25 22:44:22.795326: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000517565.jpg; No such file or directory
+2021-08-25 22:44:22.795542: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000372427.jpg; No such file or directory
+2021-08-25 22:44:22.795967: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000577876.jpg; No such file or directory
+2021-08-25 22:44:22.796144: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000360053.jpg; No such file or directory
+2021-08-25 22:44:22.796943: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000374873.jpg; No such file or directory
+2021-08-25 22:44:22.798559: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000543882.jpg; No such file or directory
+2021-08-25 22:44:22.798576: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000568117.jpg; No such file or directory
+2021-08-25 22:44:22.798570: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000189278.jpg; No such file or directory
+2021-08-25 22:44:22.798588: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000186620.jpg; No such file or directory
+2021-08-25 22:44:22.800192: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000170045.jpg; No such file or directory
+2021-08-25 22:44:22.800212: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000416172.jpg; No such file or directory
+2021-08-25 22:44:22.800240: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000309517.jpg; No such file or directory
+2021-08-25 22:44:22.792239: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000174028.jpg; No such file or directory
+2021-08-25 22:44:22.800265: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000274682.jpg; No such file or directory
+2021-08-25 22:44:22.800321: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000210082.jpg; No such file or directory
+2021-08-25 22:44:22.800356: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000385626.jpg; No such file or directory
+2021-08-25 22:44:22.800339: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000474031.jpg; No such file or directory
+2021-08-25 22:44:22.800340: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000161749.jpg; No such file or directory
+2021-08-25 22:44:22.800426: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000279939.jpg; No such file or directory
+2021-08-25 22:44:22.800351: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000429065.jpg; No such file or directory
+2021-08-25 22:44:22.800372: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000435091.jpg; No such file or directory
+2021-08-25 22:44:22.800440: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000180141.jpg; No such file or directory
+2021-08-25 22:44:22.800442: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000499237.jpg; No such file or directory
+2021-08-25 22:44:22.800418: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000330238.jpg; No such file or directory
+2021-08-25 22:44:22.800454: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000466800.jpg; No such file or directory
+2021-08-25 22:44:22.800514: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000526165.jpg; No such file or directory
+2021-08-25 22:44:22.794797: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: COCO_dataset/train2014/COCO_train2014_000000376047.jpg; No such file or directory
+Traceback (most recent call last):
+  File "training.py", line 78, in <module>
+    history = caption_model.fit(train_dataset,
+  File "/home/ciro.panariello/.conda/envs/tf/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 1100, in fit
+    tmp_logs = self.train_function(iterator)
+  File "/home/ciro.panariello/.conda/envs/tf/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 828, in __call__
+    result = self._call(*args, **kwds)
+  File "/home/ciro.panariello/.conda/envs/tf/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 888, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "/home/ciro.panariello/.conda/envs/tf/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 2942, in __call__
+    return graph_function._call_flat(
+  File "/home/ciro.panariello/.conda/envs/tf/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 1918, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "/home/ciro.panariello/.conda/envs/tf/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 555, in call
+    outputs = execute.execute(
+  File "/home/ciro.panariello/.conda/envs/tf/lib/python3.8/site-packages/tensorflow/python/eager/execute.py", line 59, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.NotFoundError: 2 root error(s) found.
+  (0) Not found:  COCO_dataset/train2014/COCO_train2014_000000318556.jpg; No such file or directory
+	 [[{{node ReadFile}}]]
+	 [[IteratorGetNext]]
+  (1) Not found:  COCO_dataset/train2014/COCO_train2014_000000318556.jpg; No such file or directory
+	 [[{{node ReadFile}}]]
+	 [[IteratorGetNext]]
+	 [[IteratorGetNext/_28]]
+0 successful operations.
+0 derived errors ignored. [Op:__inference_train_function_24404]
+
+Function call stack:
+train_function -> train_function
+
