@@ -33,7 +33,6 @@ TRAIN_SET_AUG = True
 # Data augumention on valid set
 VALID_SET_AUG = False
 
-
 # Load train_data.json pathfile
 train_data_json_path = "COCO_dataset/captions_mapping_train.json"
 # Load valid_data.json pathfile
