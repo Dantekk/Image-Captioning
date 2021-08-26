@@ -117,7 +117,7 @@ Epoch 11/13
 These are good results considering that for each image given as input to the model during training, **the error is averaged over 5 captions**. However, I spent little time doing model selection and you can improve the results by trying better settings. </br>
 For example, you could :
 1. change CNN architecture.
-2. change EMBED_DIM, NUM_HEADS, FF_DIM, BATCH_SIZE parameters.
+2. change SEQ_LENGTH, EMBED_DIM, NUM_HEADS, FF_DIM, BATCH_SIZE (etc...) parameters.
 3. change data augmentation transformations.
 4. etc...
 
