@@ -42,3 +42,5 @@ text_data_json_path  = "COCO_dataset/text_data.json"
 
 # Save training files directory
 SAVE_DIR = "save_train_dir/"
+
+
