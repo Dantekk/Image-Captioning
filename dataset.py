@@ -65,8 +65,8 @@ def read_image(img_path, size=IMAGE_SIZE):
 
 
 trainAug = tf.keras.Sequential([
-    tf.keras.layers.experimental.preprocessing.RandomContrast(factor=(0.05, 0.15)),
-    tf.keras.layers.experimental.preprocessing.RandomTranslation(height_factor=(-0.10, 0.10), width_factor=(-0.10, 0.10)),
+    	tf.keras.layers.experimental.preprocessing.RandomContrast(factor=(0.05, 0.15)),
+    	tf.keras.layers.experimental.preprocessing.RandomTranslation(height_factor=(-0.10, 0.10), width_factor=(-0.10, 0.10)),
 	tf.keras.layers.experimental.preprocessing.RandomZoom(height_factor=(-0.10, 0.10), width_factor=(-0.10, 0.10)),
 	tf.keras.layers.experimental.preprocessing.RandomRotation(factor=(-0.10, 0.10))
 ])
