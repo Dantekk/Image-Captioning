@@ -3,17 +3,12 @@ from settings import *
 from custom_schedule import custom_schedule
 from model import get_cnn_model, TransformerEncoderBlock, TransformerDecoderBlock, ImageCaptioningModel
 from utility import save_tokenizer
-
 import json
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.layers.experimental.preprocessing import TextVectorization
 import numpy as np
 
-# Setting seed
-seed = 111
-np.random.seed(seed)
-tf.random.set_seed(seed)
 
 # Load dataset
 with open(train_data_json_path) as json_file:

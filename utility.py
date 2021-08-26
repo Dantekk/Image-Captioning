@@ -12,7 +12,6 @@ def save_tokenizer(tokenizer, path_save):
     input = tf.keras.layers.Input(shape=(1,), dtype=tf.string)
     output = tokenizer(input)
     model = tf.keras.Model(input, output)
-    #model.predict(["ciao"])
     model.save(path_save + "tokenizer", save_format='tf')
 
 def get_inference_model(model_config_path):
@@ -34,10 +33,13 @@ def get_inference_model(model_config_path):
     caption_model = ImageCaptioningModel(
         cnn_model=cnn_model, encoder=encoder, decoder=decoder
     )
+
+    ##### It's necessary for init model -> without it, weights subclass model fails
     cnn_input = tf.keras.layers.Input(shape=(299, 299, 3))
     training = False
     decoder_input = tf.keras.layers.Input(shape=(None,))
     caption_model([cnn_input, training, decoder_input])
+    #####
 
     return caption_model
 
