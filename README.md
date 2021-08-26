@@ -65,6 +65,7 @@ NUM_VALID_IMG = None
 TRAIN_SET_AUG = True
 # Data augmention on valid set
 VALID_SET_AUG = False
+
 # Load train_data.json pathfile
 train_data_json_path = "COCO_dataset/captions_mapping_train.json"
 # Load valid_data.json pathfile
@@ -78,7 +79,7 @@ SAVE_DIR = "save_train_dir/"
 I have training model on full dataset (68363 train images and 33432 valid images) but you can train the model on a smaller number of images by changing the NUM_TRAIN_IMG / NUM_VALID_IMG parameters to reduce the training time and hardware resources required.
 
 ### Data augmention
-I applied data augmentation on the dataset during the training phase to reduce the generalization error, with this transformations (this code is write in `dataset.py`) :
+I applied data augmentation on the training set during the training to reduce the generalization error, with this transformations (this code is write in `dataset.py`) :
 ```python
 trainAug = tf.keras.Sequential([
     	tf.keras.layers.experimental.preprocessing.RandomContrast(factor=(0.05, 0.15)),
@@ -87,7 +88,7 @@ trainAug = tf.keras.Sequential([
 	tf.keras.layers.experimental.preprocessing.RandomRotation(factor=(-0.10, 0.10))
 ])
 ```
-You can customize your data augmentation by changing this code or disable this setting `TRAIN_SET_AUG = False` in `setting.py`. 
+You can customize your data augmentation by changing this code or disable data augmentation setting `TRAIN_SET_AUG = False` in `setting.py`. 
 ### My results
 This is results of my best training :
 ```
@@ -114,11 +115,11 @@ Epoch 10/13
 Epoch 11/13
 1069/1069 [==============================] - 1444s 1s/step - loss: 11.7543 - acc: 0.5486 - val_loss: 12.1518 - val_acc: 0.5371
 ```
-These are good results considering that for each image given as input to the model during training, **the error is averaged over 5 captions**. However, I spent little time doing model selection and you can improve the results by trying better settings. </br>
+These are good results considering that for each image given as input to the model during training, **the error and the accuracy are averaged over 5 captions**. However, I spent little time doing model selection and you can improve the results by trying better settings. </br>
 For example, you could :
 1. change CNN architecture.
 2. change SEQ_LENGTH, EMBED_DIM, NUM_HEADS, FF_DIM, BATCH_SIZE (etc...) parameters.
-3. change data augmentation transformations.
+3. change data augmentation transformations/parameters.
 4. etc...
 
 **N.B.** I have saved my best training results files in the directory `save_train_dir/`.
@@ -129,4 +130,29 @@ To generate a caption from a new image, you must :
 2. run `python3 inference.py --image={image_path_file}`
 
 ## Results example
-Examples of image output taken from the validation set
+Examples of image output taken from the validation set.
+| a large passenger jet flying through the sky             |  
+:-------------------------:|
+![](https://github.com/Dantekk/Image-Captioning/blob/main/examples_img/2.jpg)
+
+| a man in a white shirt and black shorts playing tennis             |  
+:-------------------------:|
+![](https://github.com/Dantekk/Image-Captioning/blob/main/examples_img/10.jpg)  
+
+
+| a person on a snowboard in the snow             |  
+:-------------------------:|
+![](https://github.com/Dantekk/Image-Captioning/blob/main/examples_img/15.jpg)  
+
+| a boy on a skateboard in the street            |  
+:-------------------------:|
+![](https://github.com/Dantekk/Image-Captioning/blob/main/examples_img/20.jpg)  
+
+| a black bear is walking through the grass            |  
+:-------------------------:|
+![](https://github.com/Dantekk/Image-Captioning/blob/main/examples_img/4.jpg)  
+
+
+| a train is on the tracks near a station            |  
+:-------------------------:|
+![](https://github.com/Dantekk/Image-Captioning/blob/main/examples_img/14.jpg)  
