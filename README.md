@@ -90,7 +90,7 @@ trainAug = tf.keras.Sequential([
 ```
 You can customize your data augmentation by changing this code or disable data augmentation setting `TRAIN_SET_AUG = False` in `setting.py`. 
 ### My results
-This is results of my best training :
+These are the results of my best training :
 ```
 Epoch 1/13
 1069/1069 [==============================] - 1450s 1s/step - loss: 17.3777 - acc: 0.3511 - val_loss: 13.9711 - val_acc: 0.4819
@@ -115,12 +115,18 @@ Epoch 10/13
 Epoch 11/13
 1069/1069 [==============================] - 1444s 1s/step - loss: 11.7543 - acc: 0.5486 - val_loss: 12.1518 - val_acc: 0.5371
 ```
+These are the results on test set (15000 images):
+```
+loss: 12.15461 - acc: 0.5366
+```
+
 These are good results considering that for each image given as input to the model during training, **the error and the accuracy are averaged over 5 captions**. However, I spent little time doing model selection and you can improve the results by trying better settings. </br>
 For example, you could :
 1. change CNN architecture.
 2. change SEQ_LENGTH, EMBED_DIM, NUM_HEADS, FF_DIM, BATCH_SIZE (etc...) parameters.
 3. change data augmentation transformations/parameters.
-4. etc...
+4. change optimizer and add learning rate scheduler.
+5. etc...
 
 **N.B.** I have saved my best training results files in the directory `save_train_dir/`.
 ## Inference
