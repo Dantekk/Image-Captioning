@@ -2,7 +2,7 @@
 Keras/Tensorflow Image Captioning application using CNN and Transformer as encoder/decoder. </br>
 In particulary, the architecture consists of three models:
 1. **A CNN**: used to extract the image features. In this application, it used EfficientNetB0 pre-trained on imagenet.
-2. **A TransformerEncoder**: the extracted image features are then passed to a Transformer based encoder that generates a new representation of the inputs.
+2. **A TransformerEncoder**: the extracted image features are then passed to a Transformer encoder that generates a new representation of the inputs.
 3. **A TransformerDecoder**: it takes the encoder output and the text data sequence as inputs and tries to learn to generate the caption.
 ## Dataset 
 The model has been trained on 2014 Train/Val COCO dataset.
