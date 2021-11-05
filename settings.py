@@ -35,7 +35,7 @@ TRAIN_SET_AUG = True
 # Data augmention on valid set
 VALID_SET_AUG = False
 # If you want to calculate the performance on the test set.
-TEST_SET = True
+TEST_SET = False
 
 # Load train_data.json pathfile
 train_data_json_path = "COCO_dataset/captions_mapping_train.json"

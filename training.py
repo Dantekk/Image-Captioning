@@ -45,7 +45,7 @@ print("Number of validation samples after splitting with test set: ", len(valid_
 print("Number of test samples: ", len(test_data))
 
 # Setting batch dataset
-train_dataset = make_dataset(list(train_data.keys()), list(train_data.values()), data_aug=True, tokenizer=tokenizer)
+train_dataset = make_dataset(list(train_data.keys()), list(train_data.values()), data_aug=TRAIN_SET_AUG, tokenizer=tokenizer)
 valid_dataset = make_dataset(list(valid_data.keys()), list(valid_data.values()), data_aug=VALID_SET_AUG, tokenizer=tokenizer)
 if TEST_SET:
     test_dataset = make_dataset(list(test_data.keys()), list(test_data.values()), data_aug=False, tokenizer=tokenizer)
