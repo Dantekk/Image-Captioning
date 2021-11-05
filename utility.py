@@ -3,10 +3,11 @@ from tensorflow.keras.layers.experimental.preprocessing import TextVectorization
 from custom_schedule import custom_schedule
 from tensorflow import keras
 from model import get_cnn_model, TransformerEncoderBlock, TransformerDecoderBlock, ImageCaptioningModel
-from dataset import read_image
+from dataset import read_image_inf
 import numpy as np
 import json
 import re
+from settings import *
 
 def save_tokenizer(tokenizer, path_save):
     input = tf.keras.layers.Input(shape=(1,), dtype=tf.string)
@@ -35,7 +36,7 @@ def get_inference_model(model_config_path):
     )
 
     ##### It's necessary for init model -> without it, weights subclass model fails
-    cnn_input = tf.keras.layers.Input(shape=(299, 299, 3))
+    cnn_input = tf.keras.layers.Input(shape=(IMAGE_SIZE[0], IMAGE_SIZE[1], 3))
     training = False
     decoder_input = tf.keras.layers.Input(shape=(None,))
     caption_model([cnn_input, training, decoder_input])
@@ -50,7 +51,7 @@ def generate_caption(image_path, caption_model, tokenizer, SEQ_LENGTH):
     max_decoded_sentence_length = SEQ_LENGTH - 1
 
     # Read the image from the disk
-    img = read_image(image_path)
+    img = read_image_inf(image_path)
 
     # Pass the image to the CNN
     img = caption_model.cnn_model(img)
