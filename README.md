@@ -3,7 +3,7 @@ Keras/Tensorflow Image Captioning application using CNN and Transformer as encod
 In particulary, the architecture consists of three models:
 1. **A CNN**: used to extract the image features. In this application, it used EfficientNetB0 pre-trained on imagenet.
 2. **A TransformerEncoder**: the extracted image features are then passed to a Transformer based encoder that generates a new representation of the inputs.
-3. **A TransformerDecoder**: this model takes the encoder output and the text data sequence as inputs and tries to learn to generate the caption.
+3. **A TransformerDecoder**: it takes the encoder output and the text data sequence as inputs and tries to learn to generate the caption.
 ## Dataset 
 The model has been trained on 2014 Train/Val COCO dataset.
 You can download the dataset [here](https://cocodataset.org/#download). Note that test images are not required for this code to work.</br></br>
@@ -58,13 +58,17 @@ EPOCHS = 14
 # Max number valid dataset images : 33432
 REDUCE_DATASET = False
 # Number of train images -> it must be a value between [1, 68363]
-NUM_TRAIN_IMG = None
+NUM_TRAIN_IMG = 68363
 # Number of valid images -> it must be a value between [1, 33432]
-NUM_VALID_IMG = None
+# N.B. -> IMPORTANT : the number of images of the test set is given by the difference between 33432 and NUM_VALID_IMG values.
+# for instance, with NUM_VALID_IMG = 20000 -> valid set have 20000 images and test set have the last 13432 images.
+NUM_VALID_IMG = 20000
 # Data augumention on train set
 TRAIN_SET_AUG = True
 # Data augmention on valid set
 VALID_SET_AUG = False
+# If you want to calculate the performance on the test set.
+TEST_SET = True
 
 # Load train_data.json pathfile
 train_data_json_path = "COCO_dataset/captions_mapping_train.json"
@@ -76,7 +80,7 @@ text_data_json_path  = "COCO_dataset/text_data.json"
 # Save training files directory
 SAVE_DIR = "save_train_dir/"
 ```
-I have training model on full dataset (68363 train images and 33432 valid images) but you can train the model on a smaller number of images by changing the NUM_TRAIN_IMG / NUM_VALID_IMG parameters to reduce the training time and hardware resources required.
+I have training model on full train set (68363 train images) and 20000 valid images but you can train the model on a smaller number of images by changing the NUM_TRAIN_IMG / NUM_VALID_IMG parameters to reduce the training time and hardware resources required.
 
 ### Data augmention
 I applied data augmentation on the training set during the training to reduce the generalization error, with this transformations (this code is write in `dataset.py`) :
@@ -115,9 +119,9 @@ Epoch 10/13
 Epoch 11/13
 1069/1069 [==============================] - 1444s 1s/step - loss: 11.7543 - acc: 0.5486 - val_loss: 12.1518 - val_acc: 0.5371
 ```
-These are the results on test set (15000 images):
+These are the results on test set (13432 images):
 ```
-loss: 12.15461 - acc: 0.5366
+loss: 12.08461 - acc: 0.5466
 ```
 
 These are good results considering that for each image given as input to the model during training, **the error and the accuracy are averaged over 5 captions**. However, I spent little time doing model selection and you can improve the results by trying better settings. </br>
@@ -125,7 +129,7 @@ For example, you could :
 1. change CNN architecture.
 2. change SEQ_LENGTH, EMBED_DIM, NUM_HEADS, FF_DIM, BATCH_SIZE (etc...) parameters.
 3. change data augmentation transformations/parameters.
-4. change optimizer and add learning rate scheduler.
+4. change optimizer and learning rate scheduler.
 5. etc...
 
 **N.B.** I have saved my best training results files in the directory `save_train_dir/`.
