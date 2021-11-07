@@ -140,7 +140,7 @@ To generate a caption from a new image, you must :
 2. run `python3 inference.py --image={image_path_file}`
 
 ## Results example
-Examples of image output taken from the validation set.
+Examples of image output taken from the test set.
 | a large passenger jet flying through the sky             |  
 :-------------------------:|
 ![](https://github.com/Dantekk/Image-Captioning/blob/main/examples_img/2.jpg)
