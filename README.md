@@ -94,34 +94,10 @@ trainAug = tf.keras.Sequential([
 ```
 You can customize your data augmentation by changing this code or disable data augmentation setting `TRAIN_SET_AUG = False` in `setting.py`. 
 ### My results
-These are the results of my best training :
-```
-Epoch 1/13
-1069/1069 [==============================] - 1450s 1s/step - loss: 17.3777 - acc: 0.3511 - val_loss: 13.9711 - val_acc: 0.4819
-Epoch 2/13
-1069/1069 [==============================] - 1453s 1s/step - loss: 13.7338 - acc: 0.4850 - val_loss: 12.7821 - val_acc: 0.5133
-Epoch 3/13
-1069/1069 [==============================] - 1457s 1s/step - loss: 12.9772 - acc: 0.5069 - val_loss: 12.3980 - val_acc: 0.5229
-Epoch 4/13
-1069/1069 [==============================] - 1452s 1s/step - loss: 12.5683 - acc: 0.5179 - val_loss: 12.2659 - val_acc: 0.5284
-Epoch 5/13
-1069/1069 [==============================] - 1450s 1s/step - loss: 12.3292 - acc: 0.5247 - val_loss: 12.1828 - val_acc: 0.5316
-Epoch 6/13
-1069/1069 [==============================] - 1443s 1s/step - loss: 12.1614 - acc: 0.5307 - val_loss: 12.1410 - val_acc: 0.5341
-Epoch 7/13
-1069/1069 [==============================] - 1453s 1s/step - loss: 12.0461 - acc: 0.5355 - val_loss: 12.1234 - val_acc: 0.5354
-Epoch 8/13
-1069/1069 [==============================] - 1440s 1s/step - loss: 11.9533 - acc: 0.5407 - val_loss: 12.1086 - val_acc: 0.5367
-Epoch 9/13
-1069/1069 [==============================] - 1444s 1s/step - loss: 11.8838 - acc: 0.5427 - val_loss: 12.1235 - val_acc: 0.5373
-Epoch 10/13
-1069/1069 [==============================] - 1443s 1s/step - loss: 11.8114 - acc: 0.5460 - val_loss: 12.1574 - val_acc: 0.5367
-Epoch 11/13
-1069/1069 [==============================] - 1444s 1s/step - loss: 11.7543 - acc: 0.5486 - val_loss: 12.1518 - val_acc: 0.5371
-```
+
 These are the results on test set (13432 images):
 ```
-loss: 12.08461 - acc: 0.5466
+loss: 11.8024 - acc: 0.5455
 ```
 
 These are good results considering that for each image given as input to the model during training, **the error and the accuracy are averaged over 5 captions**. However, I spent little time doing model selection and you can improve the results by trying better settings. </br>
